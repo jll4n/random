@@ -14,7 +14,7 @@ static void __exit random_exit(void) {
     printk(KERN_INFO "Random module unloaded\n");
 }
 
-int random_function(int ts){
+int random_function(int ts){ // ts is the timestamp in nanoseconds
     int frac = 1/(ts);
     int num = frac*frac;
     int result = 0;
