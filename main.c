@@ -23,7 +23,7 @@ int cos(int timestamp){
     int n;
 
     for (n = 1; n <= 10; n++) {
-        term *= (-1.0) * x * x / ((2 * n - 1) * (2 * n)); // Next term
+        term *= (-1.0) * x * x / ((2 * n - 1) * (2 * n));
         sum += term;
     }
     return sum;
@@ -36,7 +36,7 @@ int random_function(int ts, int min, int max){
     if(max <= 0 || max == NULL){
         max = 1;
     }
-    ts = ts && 0b00000000000000000000000000000000111111111111111111111111; //masque a test
+    ts = ts && 0b00000000000000000000000000000000111111111111111111111111; //verif masque
     int frac = cos(ts);
     int num = 0;
     int result = 0;
@@ -45,7 +45,6 @@ int random_function(int ts, int min, int max){
     else
         num = frac;
     }
-
     if (num % 2 == 0){
         result = num/2;
     } else {
@@ -56,6 +55,6 @@ int random_function(int ts, int min, int max){
 
 int random_gen_num(int min, int max){
     ktime_t timestamp = ktime_get();
-    int ns = ktime_to_ns(timestamp);
+    int ns = ktime_to_ns(timestamp); //verif si bien timestamp ms et pas timestamp s 
     return ns;
 }
