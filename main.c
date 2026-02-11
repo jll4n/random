@@ -36,7 +36,7 @@ int random_function(int ts, int min, int max){
     if(max <= 0 || max == NULL){
         max = 1;
     }
-    ts = ts && 0b00000000000000000000000000000000111111111111111111111111; 
+    ts = ts && 0b00000000000000000000000000000000111111111111111111111111; //masque a test
     int frac = cos(ts);
     int num = 0;
     int result = 0;
