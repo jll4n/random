@@ -3,7 +3,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("jll4n");
-MODULE_DESCRIPTION("Random gen num");
+MODULE_DESCRIPTION("Random gen num v1.0.1");
 
 #define pi 3.1415926535
 
